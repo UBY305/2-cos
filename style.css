@@ -47,7 +47,9 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-block-end: 2rem;
+
+  /* FIX: responsive margin instead of fixed 2rem */
+  margin-block-end: clamp(1.5rem, 4vw, 2rem);
 }
 
 .faq-header h1 {
