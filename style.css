@@ -37,7 +37,8 @@ body {
   background: var(--white);
   inline-size: min(100%, 37.5rem);
 
-  border-radius: var(--radius);
+  border-radius: clamp(0.75rem, 2vw, 1rem);
+
   padding: clamp(1.5rem, 5vw, 2rem);
 
   box-shadow: var(--shadow);
@@ -46,7 +47,9 @@ body {
 .faq-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
+
+  gap: clamp(0.75rem, 2vw, 1rem);
+
   margin-block-end: clamp(1.5rem, 4vw, 2rem);
 }
 
@@ -57,6 +60,7 @@ body {
 
 .faq-item {
   border-block-end: 1px solid var(--purple-100);
+
   padding-block: clamp(1rem, 2.5vw, 1.4rem);
 }
 
@@ -69,7 +73,6 @@ body {
   background: none;
   border: none;
 
-  /* FIX: was 1rem */
   font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   font-weight: 700;
 
@@ -82,7 +85,8 @@ body {
   text-align: start;
 
   cursor: pointer;
-  gap: 1rem;
+
+  gap: clamp(0.75rem, 2vw, 1rem);
 
   transition: color var(--transition);
 }
@@ -117,11 +121,11 @@ body {
 }
 
 .faq-answer p {
-  margin-block-start: 1rem;
+  margin-block-start: clamp(0.75rem, 2vw, 1rem);
+
   color: var(--gray);
   line-height: 1.6;
 
-  /* opcjonalnie też responsywne */
   font-size: clamp(0.9rem, 1vw, 1rem);
 }
 
