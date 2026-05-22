@@ -57,8 +57,6 @@ body {
 
 .faq-item {
   border-block-end: 1px solid var(--purple-100);
-
-  /* FIX: was 1.2rem */
   padding-block: clamp(1rem, 2.5vw, 1.4rem);
 }
 
@@ -71,7 +69,8 @@ body {
   background: none;
   border: none;
 
-  font-size: 1rem;
+  /* FIX: was 1rem */
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   font-weight: 700;
 
   color: var(--purple-950);
@@ -121,7 +120,9 @@ body {
   margin-block-start: 1rem;
   color: var(--gray);
   line-height: 1.6;
-  font-size: 0.95rem;
+
+  /* opcjonalnie też responsywne */
+  font-size: clamp(0.9rem, 1vw, 1rem);
 }
 
 /* Reduced motion support */
@@ -146,6 +147,6 @@ body {
   }
 
   .faq-question {
-    font-size: 1.05rem;
+    font-size: clamp(1rem, 1.1vw, 1.15rem);
   }
 }
