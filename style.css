@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Work Sans", sans-serif;
+    background-color: hsl(275, 100%, 97%);
+    background-image: url("https://raw.githubusercontent.com/frontendmentorio/faq-accordion/main/assets/images/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.faq-card {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.faq-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+    .faq-header h1 {
+        font-size: 3rem;
+        color: hsl(292, 42%, 14%);
+    }
+
+.faq-item {
+    border-bottom: 1px solid hsl(275, 100%, 97%);
+    padding: 1.2rem 0;
+}
+
+    .faq-item:last-child {
+        border-bottom: none;
+    }
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(292, 42%, 14%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s ease;
+    gap: 1rem;
+}
+
+    .faq-question:hover,
+    .faq-question:focus {
+        color: hsl(281, 83%, 54%);
+        outline: none;
+    }
+
+.icon {
+    min-width: 30px;
+    min-height: 30px;
+    background: hsl(281, 83%, 54%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    transition: 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+    .faq-answer p {
+        margin-top: 1rem;
+        color: hsl(292, 16%, 49%);
+        line-height: 1.6;
+        font-size: 15px;
+    }
+
+@media (max-width: 600px) {
+
+    body {
+        background-image: url("https://raw.githubusercontent.com/frontendmentorio/faq-accordion/main/assets/images/background-pattern-mobile.svg");
+    }
+
+    .faq-card {
+        padding: 1.5rem;
+    }
+
+    .faq-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .faq-question {
+        font-size: 0.95rem;
+    }
+}
