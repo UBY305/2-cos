@@ -8,10 +8,6 @@
   --radius: 1rem;
   --shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.1);
 
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-
   --transition: 0.3s ease;
 }
 
@@ -26,9 +22,7 @@ body {
   font-family: "Work Sans", sans-serif;
 
   background-color: var(--purple-100);
-
   background-image: url("https://raw.githubusercontent.com/frontendmentorio/faq-accordion/main/assets/images/background-pattern-mobile.svg");
-
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -41,11 +35,9 @@ body {
 
 .faq-card {
   background: var(--white);
-
   inline-size: min(100%, 37.5rem);
 
   border-radius: var(--radius);
-
   padding: clamp(1.5rem, 5vw, 2rem);
 
   box-shadow: var(--shadow);
@@ -55,7 +47,6 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
-
   margin-block-end: 2rem;
 }
 
@@ -66,7 +57,6 @@ body {
 
 .faq-item {
   border-block-end: 1px solid var(--purple-100);
-
   padding-block: 1.2rem;
 }
 
@@ -76,7 +66,6 @@ body {
 
 .faq-question {
   inline-size: 100%;
-
   background: none;
   border: none;
 
@@ -92,12 +81,9 @@ body {
   text-align: start;
 
   cursor: pointer;
-
   gap: 1rem;
 
-  transition:
-    color var(--transition),
-    transform var(--transition);
+  transition: color var(--transition);
 }
 
 .faq-question:hover,
@@ -120,44 +106,39 @@ body {
   align-items: center;
 
   font-size: 1.3rem;
-
   transition: background-color var(--transition);
 }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-
   transition: max-height var(--transition);
 }
 
 .faq-answer p {
   margin-block-start: 1rem;
-
   color: var(--gray);
-
   line-height: 1.6;
   font-size: 0.95rem;
 }
 
-/* Accessibility: reduced motion */
+/* Reduced motion support (NO !important) */
 @media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-
-    transition-duration: 0.01ms !important;
-
-    scroll-behavior: auto !important;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
   }
 }
 
-/* Mobile first */
+/* Desktop */
 @media (min-width: 37.5em) {
-
   body {
     background-image: url("https://raw.githubusercontent.com/frontendmentorio/faq-accordion/main/assets/images/background-pattern-desktop.svg");
   }
