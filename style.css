@@ -47,8 +47,6 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
-
-  /* FIX: responsive margin instead of fixed 2rem */
   margin-block-end: clamp(1.5rem, 4vw, 2rem);
 }
 
@@ -59,7 +57,9 @@ body {
 
 .faq-item {
   border-block-end: 1px solid var(--purple-100);
-  padding-block: 1.2rem;
+
+  /* FIX: was 1.2rem */
+  padding-block: clamp(1rem, 2.5vw, 1.4rem);
 }
 
 .faq-item:last-child {
@@ -124,7 +124,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* Reduced motion support (NO !important) */
+/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
