@@ -110,7 +110,9 @@ body {
   justify-content: center;
   align-items: center;
 
-  font-size: 1.3rem;
+  /* FIX: removed fixed 1.3rem */
+  font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+
   transition: background-color var(--transition);
 }
 
